@@ -1,0 +1,106 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Muju API",
+    "version": "1.0",
+    "license": {
+      "name": "Mulai Jualan"
+    },
+    "description": "Muju API Documentation"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/token?email={email}&password={password}": {
+      "post": {
+        "summary": "",
+        "operationId": "post-token",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "examples": {
+              "example": {
+                "id": 1111,
+                "email": "1610631170062@student.unsika.ac.id",
+                "active": true,
+                "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOiIxNTk1OTEwNDQ2IiwiZXhwIjoiMTkxMTI3MDQ0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6IjE2MTA2MzExNzAwNjJAc3R1ZGVudC51bnNpa2EuYWMuaWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Ijc4Mjk4NWU1LTJjZGQtNGEyOS04Njk2LWU5NzMyMTVmNDRmZiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiIxNjEwNjMxMTcwMDYyQHN0dWRlbnQudW5zaWthLmFjLmlkIn0.sWvXs0fgz2_5zZpDmg_4STRREpWQXGSiK7dQI3OnowU",
+                "token_type": "Bearer",
+                "expires_in": 1911270446,
+                "error_description": null
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "access_token": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "token_type": {
+                  "type": "string"
+                },
+                "expires_in": {
+                  "type": "integer"
+                },
+                "error_description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "": {
+            "examples": {
+              "Response": {
+                "id": 1111,
+                "email": "1610631170062@student.unsika.ac.id",
+                "active": true,
+                "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOiIxNTk1OTEwNDQ2IiwiZXhwIjoiMTkxMTI3MDQ0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6IjE2MTA2MzExNzAwNjJAc3R1ZGVudC51bnNpa2EuYWMuaWQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Ijc4Mjk4NWU1LTJjZGQtNGEyOS04Njk2LWU5NzMyMTVmNDRmZiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiIxNjEwNjMxMTcwMDYyQHN0dWRlbnQudW5zaWthLmFjLmlkIn0.sWvXs0fgz2_5zZpDmg_4STRREpWQXGSiK7dQI3OnowU",
+                "token_type": "Bearer",
+                "expires_in": 1911270446,
+                "error_description": null
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "type": "string",
+          "name": "email",
+          "in": "path",
+          "required": true,
+          "description": "customer email"
+        },
+        {
+          "type": "string",
+          "name": "password",
+          "in": "path",
+          "required": true,
+          "description": "customer password"
+        }
+      ]
+    }
+  },
+  "definitions": {},
+  "securityDefinitions": {},
+  "basePath": "/api"
+}
