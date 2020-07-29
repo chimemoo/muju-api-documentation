@@ -111,10 +111,51 @@
         "operationId": "postcustomers",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
           }
         },
-        "description": "Register as User"
+        "description": "Register as User",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customer": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string",
+                      "description": "value nya sama dengan email namun lowercase"
+                    },
+                    "": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "role_ids": {
+                      "type": "array",
+                      "description": "isinya [3,6]\n",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Request body"
+          }
+        ]
       }
     }
   },
