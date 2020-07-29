@@ -21,7 +21,7 @@
   "paths": {
     "/token?email={email}&password={password}": {
       "post": {
-        "summary": "Login",
+        "summary": "Login Customer",
         "operationId": "post-token",
         "responses": {
           "200": {
@@ -107,7 +107,7 @@
     "customers": {
       "parameters": [],
       "post": {
-        "summary": "Register User",
+        "summary": "Register Customer",
         "operationId": "postcustomers",
         "responses": {
           "200": {
@@ -127,6 +127,14 @@
               "properties": {
                 "customer": {
                   "type": "object",
+                  "required": [
+                    "email",
+                    "password",
+                    "username",
+                    "first_name",
+                    "last_name",
+                    "role_ids"
+                  ],
                   "properties": {
                     "email": {
                       "type": "string"
@@ -138,7 +146,7 @@
                       "type": "string",
                       "description": "value nya sama dengan email namun lowercase"
                     },
-                    "": {
+                    "first_name": {
                       "type": "string"
                     },
                     "last_name": {
@@ -151,7 +159,10 @@
                     }
                   }
                 }
-              }
+              },
+              "required": [
+                "customer"
+              ]
             },
             "description": "Request body"
           }
