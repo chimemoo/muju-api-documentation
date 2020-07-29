@@ -21,7 +21,7 @@
   "paths": {
     "/token?email={email}&password={password}": {
       "post": {
-        "summary": "",
+        "summary": "Login",
         "operationId": "post-token",
         "responses": {
           "200": {
