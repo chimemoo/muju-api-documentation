@@ -62,7 +62,10 @@
                   "type": "integer"
                 },
                 "error_description": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 }
               }
             }
@@ -80,27 +83,47 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint for login"
       },
       "parameters": [
         {
           "type": "string",
           "name": "email",
           "in": "path",
-          "required": true,
-          "description": "customer email"
+          "required": true
         },
         {
           "type": "string",
           "name": "password",
           "in": "path",
-          "required": true,
-          "description": "customer password"
+          "required": true
         }
       ]
+    },
+    "customers": {
+      "parameters": [],
+      "post": {
+        "summary": "Register User",
+        "operationId": "postcustomers",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "Register as User"
+      }
     }
   },
   "definitions": {},
   "securityDefinitions": {},
-  "basePath": "/api"
+  "basePath": "/api/",
+  "tags": [
+    {
+      "name": "Authentication"
+    }
+  ]
 }
