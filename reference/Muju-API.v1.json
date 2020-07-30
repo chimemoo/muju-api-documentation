@@ -164,7 +164,24 @@
                 "customer"
               ]
             },
-            "description": "Request body"
+            "description": "Request body",
+            "x-examples": {
+              "example-1": {
+                "customer": {
+                  "shopping_cart_items": [],
+                  "username": "saya7@gmail.com",
+                  "email": "saya9@gmail.com",
+                  "first_name": "John",
+                  "last_name": "Smith",
+                  "language_id": "1",
+                  "password": "1",
+                  "role_ids": [
+                    3,
+                    6
+                  ]
+                }
+              }
+            }
           }
         ]
       }
